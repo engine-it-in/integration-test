@@ -1,0 +1,33 @@
+{
+  "checkList": [
+    {
+      "checkName": "string",
+      "checkSuccess": false,
+      "checkResult": [],
+      "parameter": [
+        {
+          "className": "string",
+          "name": "string",
+          "value": "string"
+        },
+        {
+          "className": "string",
+          "name": "string",
+          "value": "string"
+        },
+        {
+          "className": "string",
+          "name": "string",
+          "value": "string"
+        },
+        {
+          "className": "string",
+          "name": "string",
+          "value": "string"
+        }
+      ],
+      "processAttempt": false
+    }
+  ],
+  "decisionID": "string"
+}
