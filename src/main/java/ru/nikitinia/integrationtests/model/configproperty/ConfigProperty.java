@@ -1,4 +1,4 @@
-package ru.alfastrah.odm.integrationtests.model.configproperty;
+package ru.nikitinia.integrationtests.model.configproperty;
 
 /**
  * Объект для работы с:
