@@ -1,15 +1,15 @@
-package ru.alfastrah.odm.integrationtests.service.providesecrets.autocache;
+package ru.nikitinia.integrationtests.service.providesecrets.autocache;
 
 import lombok.experimental.UtilityClass;
-import ru.alfastrah.odm.integrationtests.logicwrapper.PropertyWrapper;
-import ru.alfastrah.odm.integrationtests.model.vault.AuthParam;
-import ru.alfastrah.odm.integrationtests.model.vault.VaultData;
-import ru.alfastrah.odm.integrationtests.service.providesecrets.logic.VaultFolderData;
+import ru.nikitinia.integrationtests.logicwrapper.PropertyWrapper;
+import ru.nikitinia.integrationtests.model.vault.AuthParam;
+import ru.nikitinia.integrationtests.model.vault.VaultData;
+import ru.nikitinia.integrationtests.service.providesecrets.logic.VaultFolderData;
 
-import static ru.alfastrah.odm.integrationtests.service.providesecrets.autocache.VaultPrepareAutocacheResponseData.processingAutoCacheAuthData;
+import static ru.nikitinia.integrationtests.service.providesecrets.someservicewhichneedprovide.VaultPrepareResponseData.processingAuthData;
 
 @UtilityClass
-public class VaultAutocacheHandler {
+public class VaultHandler {
 
     /**
      * Обработка конкретных параметров папки с параметрами к autocache
@@ -19,11 +19,11 @@ public class VaultAutocacheHandler {
     public static AuthParam handle() {
 
         VaultData vaultData = VaultData.builder()
-                .role_id(PropertyWrapper.getProperty().environmentProperty().vaultAutoCacheRoleId())
-                .secret_id(PropertyWrapper.getProperty().environmentProperty().vaultAutoCacheSecretId())
+                .role_id(PropertyWrapper.getProperty().environmentProperty().vaultRoleId())
+                .secret_id(PropertyWrapper.getProperty().environmentProperty().vaultSecretId())
                 .build();
 
-        return processingAutoCacheAuthData(VaultFolderData.getResponseVaultFolderData(vaultData));
+        return processingAuthData(VaultFolderData.getResponseVaultFolderData(vaultData));
 
     }
 }
