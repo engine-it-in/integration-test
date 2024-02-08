@@ -14,7 +14,7 @@ import static ru.nikitinia.integrationtests.util.constant.Constant.Data.RequestD
 import static ru.nikitinia.integrationtests.util.constant.Constant.Data.ResponseData.ACCESS_TOKEN;
 
 @UtilityClass
-public class KeycloakAuthorize {
+public class Authorize {
 
     /**
      * Получить токен доступа из авторизационного провайдера
