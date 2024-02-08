@@ -1,10 +1,16 @@
 package ru.nikitinia.integrationtests.model.configproperty;
 
+import lombok.Builder;
+
 /**
- * Объект с атрибутами config.properties
- *
+ * Объект для работы с: 
+ *  конфигурационными переменными - ConfigProperty (config.properties)
+ *  системными переменными - EnvironmentProperty environmentProperty (env.properties)
  */
+@Builder
 public record Property(
-        String serviceUrl
+        ConfigProperty configProperty,
+        EnvironmentProperty environmentProperty
+
 ) {
 }
