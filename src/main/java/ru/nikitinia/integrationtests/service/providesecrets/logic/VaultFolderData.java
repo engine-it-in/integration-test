@@ -1,13 +1,13 @@
-package ru.alfastrah.odm.integrationtests.service.providesecrets.logic;
+package ru.nikitinia.integrationtests.service.providesecrets.logic;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
 import io.restassured.response.Response;
 import lombok.experimental.UtilityClass;
-import ru.alfastrah.odm.integrationtests.logicwrapper.PropertyWrapper;
-import ru.alfastrah.odm.integrationtests.model.vault.VaultData;
+import ru.nikitinia.integrationtests.logicwrapper.PropertyWrapper;
+import ru.nikitinia.integrationtests.model.vault.VaultData;
 
-import static ru.alfastrah.odm.integrationtests.util.constant.Constant.VaultData.VaultFolderData.RequestData.HEADER_TOKEN_VAULT;
+import static ru.nikitinia.integrationtests.util.constant.Constant.VaultData.VaultFolderData.RequestData.HEADER_TOKEN_VAULT;
 
 @UtilityClass
 public class VaultFolderData {
