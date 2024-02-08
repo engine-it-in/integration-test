@@ -9,6 +9,7 @@ import lombok.Builder;
 public record VaultData(
 
         String role_id,
+        
         String secret_id
 
 ) {
