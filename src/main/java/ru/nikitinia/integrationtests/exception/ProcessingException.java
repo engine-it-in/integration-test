@@ -1,4 +1,4 @@
-package ru.alfastrah.odm.integrationtests.exception;
+package ru.nikitinia.integrationtests.exception;
 
 public class ProcessingException extends RuntimeException{
 
