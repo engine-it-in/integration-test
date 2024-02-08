@@ -82,8 +82,8 @@ public class PropertyWrapper {
             }
 
             return EnvironmentProperty.builder()
-                    .vaultAutoCacheSecretId(config.getString("vaultAutoCacheSecretId"))
-                    .vaultAutoCacheRoleId(config.getString("vaultAutoCacheRoleId"))
+                    .vaultSecretId(config.getString("vaultSecretId"))
+                    .vaultRoleId(config.getString("vaultRoleId"))
                     .build();
 
         } catch (ConfigurationException e) {
