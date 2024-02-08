@@ -1,23 +1,17 @@
-package ru.alfastrah.odm.integrationtests.service.providesecrets.autocache;
+package ru.nikitin.integrationtests.service.providesecrets.autocache;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import lombok.experimental.UtilityClass;
-import ru.alfastrah.odm.integrationtests.exception.ProcessingException;
-import ru.alfastrah.odm.integrationtests.model.vault.AuthParam;
+import ru.nikitin.integrationtests.exception.ProcessingException;
+import ru.nikitin.integrationtests.model.vault.AuthParam;
 
 import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 import static org.apache.commons.lang3.StringUtils.EMPTY;
-import static ru.alfastrah.odm.integrationtests.util.constant.Constant.VaultData.VaultFolderData.ResponseProcessingData.DELIMITER_STRING;
-import static ru.alfastrah.odm.integrationtests.util.constant.Constant.VaultData.VaultFolderData.ResponseProcessingData.DELIMITER_VALUE;
-import static ru.alfastrah.odm.integrationtests.util.constant.Constant.VaultData.VaultFolderData.ResponseProcessingData.DOT;
-import static ru.alfastrah.odm.integrationtests.util.constant.Constant.VaultData.VaultFolderData.ResponseProcessingData.END_STRING;
-import static ru.alfastrah.odm.integrationtests.util.constant.Constant.VaultData.VaultFolderData.ResponseProcessingData.PATH_TO_DATA;
-import static ru.alfastrah.odm.integrationtests.util.constant.Constant.VaultData.VaultFolderData.ResponseProcessingData.START_STRING;
 
 @UtilityClass
 public class VaultPrepareResponseData {
@@ -33,7 +27,7 @@ public class VaultPrepareResponseData {
     public static AuthParam processingAutoCacheAuthData(Response response) {
 
         String[] vaultDataAuthList =
-                VaultPrepareAutocacheResponseData.vaultPrepareDataFromAutocacheFolder(response);
+                VaultPrepareResponseData.vaultPrepareDataFromFolder(response);
 
         Map<String, String> authData =
                 VaultPrepareAutocacheResponseData.prepareDataToMapObject(vaultDataAuthList);
@@ -42,7 +36,7 @@ public class VaultPrepareResponseData {
                 .convertValue(authData, AuthParam.class);
     }
 
-    private static String[] vaultPrepareDataFromAutocacheFolder(Response response) {
+    private static String[] vaultPrepareDataFromFolder(Response response) {
         return new JsonPath(response.getBody().asString())./*some logic to processing data*/;
     }
 
