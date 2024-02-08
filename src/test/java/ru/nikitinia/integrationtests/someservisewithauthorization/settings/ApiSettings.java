@@ -16,6 +16,7 @@ public class ApiSettings {
     protected static final ObjectMapper objectStaticMapper =
             new ObjectMapper();
 
+    /*Add specific serializer*/
     protected static final Gson jsonStaticObject =
             new GsonBuilder()
                     .registerTypeAdapter(XMLGregorianCalendar.class, new XMLGregorianCalendarTypeAdapter())
