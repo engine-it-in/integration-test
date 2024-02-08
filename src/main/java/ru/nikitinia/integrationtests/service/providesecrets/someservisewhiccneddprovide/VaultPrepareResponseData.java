@@ -20,7 +20,7 @@ import static ru.alfastrah.odm.integrationtests.util.constant.Constant.VaultData
 import static ru.alfastrah.odm.integrationtests.util.constant.Constant.VaultData.VaultFolderData.ResponseProcessingData.START_STRING;
 
 @UtilityClass
-public class VaultPrepareAutocacheResponseData {
+public class VaultPrepareResponseData {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
@@ -43,20 +43,14 @@ public class VaultPrepareAutocacheResponseData {
     }
 
     private static String[] vaultPrepareDataFromAutocacheFolder(Response response) {
-        return new JsonPath(response.getBody().asString())
-                .getString(PATH_TO_DATA)
-                .replace(START_STRING, EMPTY)
-                .replace(END_STRING, EMPTY)
-                .split(DELIMITER_STRING);
+        return new JsonPath(response.getBody().asString())./*some logic to processing data*/;
     }
 
     private static Map<String, String> prepareDataToMapObject(String[] strings) {
 
         try {
-            return Arrays.stream(strings)
-                    .collect(Collectors.toMap(
-                            s -> s.substring(0, s.indexOf(DELIMITER_VALUE)).replace(DOT, EMPTY),
-                            s -> s.substring(s.indexOf(DELIMITER_VALUE)+1)));
+            /* Some logic to prepare data*/
+            return data;
         } catch (RuntimeException exception) {
             throw new ProcessingException(
                     String.format(
