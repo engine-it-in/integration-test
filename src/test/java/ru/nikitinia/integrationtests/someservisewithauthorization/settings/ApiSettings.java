@@ -1,17 +1,17 @@
-package ru.alfastrah.odm.integrationtests.autocodecache.settings;
+package ru.nikitinia.integrationtests.autocodecache.settings;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.junit.jupiter.api.BeforeAll;
-import ru.alfastrah.odm.integrationtests.logicwrapper.PropertyWrapper;
-import ru.alfastrah.odm.integrationtests.model.config.XMLGregorianCalendarTypeAdapter;
+import ru.nikitinia.integrationtests.logicwrapper.PropertyWrapper;
+import ru.nikitinia.integrationtests.model.config.XMLGregorianCalendarTypeAdapter;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 
-import static ru.alfastrah.odm.integrationtests.logicwrapper.RequestMediator.initRequestSpecification;
+import static ru.nikitinia.integrationtests.logicwrapper.RequestMediator.initRequestSpecification;
 
-public class AutoCodeCacheApiSettings {
+public class ApiSettings {
 
     protected static final ObjectMapper objectStaticMapper =
             new ObjectMapper();
@@ -23,7 +23,7 @@ public class AutoCodeCacheApiSettings {
 
     @BeforeAll
     static void setRequestSpecification() {
-        initRequestSpecification(PropertyWrapper.getProperty().configProperty().autoCodeCacheApiUrl());
+        initRequestSpecification(PropertyWrapper.getProperty().configProperty().someServiceUrl());
     }
 
 }
