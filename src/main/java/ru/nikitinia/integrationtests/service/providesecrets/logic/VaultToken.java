@@ -6,7 +6,7 @@ import ru.nikitinia.integrationtests.logicwrapper.PropertyWrapper;
 import ru.nikitinia.integrationtests.model.vault.VaultData;
 
 import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
-import static ru.nikitinia.integrationtests.util.constant.Constant.VaultData.VaultToken.ResponseData.PATH_TO_TOKEN;
+import static ru.nikitinia.integrationtests.util.constant.Constant.VaultConstantData.VaultToken.ResponseData.PATH_TO_TOKEN;
 
 @UtilityClass
 public class VaultToken {
@@ -18,13 +18,13 @@ public class VaultToken {
      * @param vaultData - объект с параметрами доступа в vault
      * @return токен в vault
      */
-    public static String getToken(VaultData vaultData) {
+    public static String getToken(ru.alfastrah.odm.integrationtests.model.vault.VaultData vaultData) {
 
         return RestAssured.given()
                 .contentType(APPLICATION_JSON_VALUE)
                 .body(vaultData)
                 .when()
-                .post(PropertyWrapper.getProperty().configProperty().vaultLoginUrl())
+                .post(PropertyWrapper.getProperty().configProperty().tokenUrl())
                 .jsonPath()
                 .getString(PATH_TO_TOKEN);
     }

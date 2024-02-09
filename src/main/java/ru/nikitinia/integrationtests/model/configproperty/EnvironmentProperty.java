@@ -4,7 +4,7 @@ import lombok.Builder;
 
 /**
  * Объект для работы с:
- *  Системными переменными - EnvironmentProperty environmentProperty (env.properties)
+ *  Системными переменными - environmentProperty (env.properties)
  *  Например, данные для подключения к vault
  */
 @Builder

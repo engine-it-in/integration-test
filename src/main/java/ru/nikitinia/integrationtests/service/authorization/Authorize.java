@@ -4,14 +4,14 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import lombok.experimental.UtilityClass;
-import ru.alfastrah.odm.integrationtests.logicwrapper.PropertyWrapper;
-import ru.alfastrah.odm.integrationtests.model.vault.AuthParam;
+import ru.nikitinia.integrationtests.logicwrapper.PropertyWrapper;
+import ru.nikitinia.integrationtests.model.vault.AuthParam;
 
-import static ru.nikitinia.integrationtests.util.constant.Constant.Data.RequestData.CLIENT_ID;
-import static ru.nikitinia.integrationtests.util.constant.Constant.Data.RequestData.CLIENT_SECRET;
-import static ru.nikitinia.integrationtests.util.constant.Constant.Data.RequestData.CONTENT_TYPE_URLENCODED;
-import static ru.nikitinia.integrationtests.util.constant.Constant.Data.RequestData.GRANT_TYPE;
-import static ru.nikitinia.integrationtests.util.constant.Constant.Data.ResponseData.ACCESS_TOKEN;
+import static ru.nikitinia.integrationtests.util.constant.Constant.kData.RequestData.CLIENT_ID;
+import static ru.nikitinia.integrationtests.util.constant.Constant.kData.RequestData.CLIENT_SECRET;
+import static ru.nikitinia.integrationtests.util.constant.Constant.kData.RequestData.CONTENT_TYPE_URLENCODED;
+import static ru.nikitinia.integrationtests.util.constant.Constant.kData.RequestData.GRANT_TYPE;
+import static ru.nikitinia.integrationtests.util.constant.Constant.kData.ResponseData.ACCESS_TOKEN;
 
 @UtilityClass
 public class Authorize {

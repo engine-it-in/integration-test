@@ -1,4 +1,4 @@
-package ru.nikitinia.integrationtests.autocodecache.settings;
+package ru.nikitinia.integrationtests.someServiseWithAuthorization;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;

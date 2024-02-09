@@ -24,14 +24,14 @@ public class Constant {
     }
 
     @UtilityClass
-    public class VaultData {
+    public class VaultConstantData {
 
         @UtilityClass
         public class VaultToken {
 
             @UtilityClass
             public class ResponseData {
-                public static final String PATH_TO_TOKEN = /*path to token -> folder.parameter*/;
+                public static final String PATH_TO_TOKEN = "path to token -> folder.parameter";
             }
 
         }
